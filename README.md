@@ -1,7 +1,5 @@
 # Nina Corducci
-## _Débuggez et optimisez un site de photographe_
-
-Vous êtes développeur freelance et vous décidez de proposer vos services d’optimisation SEO à de nouveaux clients.
+## _Débugger et optimiser un site de photographe_
 
 Nina Carducci, une photographe, possède un site qui regroupe tous ses travaux. Le site peut être optimisé, amélioré et allégé.
 
