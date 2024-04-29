@@ -25,7 +25,7 @@ h1 {
     font-size: 26px;
 }
 
-.nav ul{
+nav ul{
 	display: flex;
     list-style: none;
     flex-direction: row;
@@ -33,12 +33,18 @@ h1 {
     gap: 2rem;
 }
 
-.nav li {
+/*nav li {
     padding-inline: 10px;
+}*/
+
+nav a {
+    text-decoration: none;
+    color: #000;
 }
 
-.nav a {
-    text-decoration: none;
+nav a:hover{
+    cursor: pointer;
+    text-decoration: underline;
     color: #000;
 }
 
@@ -108,11 +114,32 @@ h1 {
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .gallery .nav {
     justify-content: center;
+}
+
+.gallery-items-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5rem;
+    justify-content: center;
+}
+
+.tags-bar {
+    display: flex;
+    gap: 2rem;
+}
+
+.tags-bar:hover {
+    cursor: pointer;
+}
+
+.nav-item {
+    background-color: beige;
+    border-radius: 25px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -126,6 +153,8 @@ h1 {
 
 .item-column {
     position: relative;
+    width: 30%;
+    height: 30%;
 }
 
 .item-column::after {
@@ -141,11 +170,35 @@ h1 {
     object-fit: cover;
 }
 
+/*Section quote*/
+#quote {
+    font-family: 'Spectral';
+    font-style: italic;
+    width: 70%;
+    margin: auto;
+    padding-block: 3em;
+}
+
+.quote__text {
+    font-family: Spectral;
+    font-style: italic;
+    font-weight: 300;
+    font-size: xx-large;
+}
+
+.quote__author {
+    font-weight: bold;
+} 
 /* Section Services */
 #services {
     background-color: #A8D5D8;
     position: relative;
     padding: 2em 0;
+}
+
+#services h2 {
+    display: flex;
+    justify-content: center;
 }
 
 #services .container {
@@ -154,6 +207,12 @@ h1 {
     z-index: 1;
 }
 
+.all-services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
 .service {
     background-color: white;
     width: 30%;
