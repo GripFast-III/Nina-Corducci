@@ -17,338 +17,370 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
   </head>
 
   <body>
     <header>
-      <h1>Nina Carducci</h1>
+      <h1 class="name">Nina Carducci</h1>
       <nav>
         <ul>
           <li><a href="#about">À propos</a></li>
           <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#services">Service</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
             <a
               class="social-link"
               href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
               target="_blank"
-            >
-              <img src="assets/images/instagram.png" alt="Instagram" />
-            </a>
+              ><img src="assets/images/instagram.png" alt="Logo instagram"
+            /></a>
           </li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <section>
-        <div class="carousel slide" data-bs-ride="carousel">
+      <section id="top">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-indicators">
             <button
               type="button"
-              data-bs-target="#carousel"
+              data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="0"
+              class=""
               aria-label="Slide 1"
             ></button>
             <button
               type="button"
-              data-bs-target="#carousel"
+              data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="1"
+              aria-label="Slide 2"
               class="active"
               aria-current="true"
-              aria-label="Slide 2"
             ></button>
             <button
               type="button"
-              data-bs-target="#carousel"
+              data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="2"
               aria-label="Slide 3"
+              class=""
             ></button>
           </div>
-
           <div class="carousel-inner">
             <div class="carousel-item">
               <img
                 src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg"
                 class="d-block w-100"
-                alt="Slider 1"
+                alt="Homme d'affaire sur passage piéton"
               />
             </div>
             <div class="carousel-item active">
               <img
                 src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg"
                 class="d-block w-100"
-                alt="Slider 2"
+                alt="Foule festive"
               />
             </div>
             <div class="carousel-item">
               <img
                 src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg"
                 class="d-block w-100"
-                alt="Slider 3"
+                alt="Couple marié"
               />
             </div>
           </div>
-
           <button
             class="carousel-control-prev"
             type="button"
-            data-bs-target="#carousel"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Précédent</span>
+            <span class="visually-hidden">Previous</span>
           </button>
-
           <button
             class="carousel-control-next"
             type="button"
-            data-bs-target="#carousel"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Suivant</span>
+            <span class="visually-hidden">Next</span>
           </button>
         </div>
       </section>
 
       <section id="about">
-        <div class="picture left">
-          <img src="./assets/images/nina.png" alt="Photo de Nina Carducci" />
+        <div class="picture nina">
+          <img src="./assets/images/nina.png" alt="Portrait de Nina" />
         </div>
-        <div class="about-me">
-          <h2>À propos de moi</h2>
-          <p>
+        <div id="about-me">
+          <h3 class="about-me__title">À propos de moi</h3>
+          <p class="about-me__introduction">
             Devenir photographe était pour moi une évidence. Comme si j’y étais
             prédestinée. Saisir un moment, une émotion, une situation, un
             endroit, une lumière et les rendre immortels, voilà ce qui me fait
             vibrer.
           </p>
-          <p>
+          <p class="text-about">
             Nous passons notre vie à chercher le bonheur, et lorsque nous y
             touchons, nous n’avons qu’une envie : le figer au travers de
             photographies pour le savourer avec les personnes qui sont
-            importantes à nos yeux ou le partager au plus grand nombre.
-          </p>
-          <p>
-            C’est ce que je vous propose : saisir ces merveilleux moments au
-            travers de mon regard, mon approche, ma technique. Rendre ces
-            moments immortels, afin que vous puissiez y puiser de l’amour, du
-            bonheur, de la tendresse et de lumière à chaque fois que vous
-            poserez les yeux sur vos photos.
+            importantes à nos yeux, ou le partager au plus grand nombre. C’est
+            ce que je vous propose : saisir ces merveilleux moments au travers
+            de mon regard, mon approche, ma technique. Rendre ces moments
+            immortels, afin que vous puissiez y puiser de l’amour, du bonheur,
+            de la tendresse et de lumière à chaque fois que vous poserez les
+            yeux sur vos photos.
           </p>
         </div>
       </section>
 
       <section id="gallery">
-        <h2>Portfolio</h2>
-        <div class="gallery">
-          <ul class="tags-bar nav nav-pills my-4">
-            <li class="nav-item">
-              <span class="nav-link active" data-images-toggle="all">Tous</span>
-            </li>
-            <li class="nav-item">
-              <span class="nav-link" data-images-toggle="Concert">Concert</span>
-            </li>
-            <li class="nav-item">
-              <span class="nav-link" data-images-toggle="Entreprises"
-                >Entreprises</span
+        <h3 class="title">Portfolio</h3>
+        <div class="container py-3">
+          <div class="gallery">
+            <ul class="my-4 tags-bar nav nav-pills">
+              <li class="nav-item">
+                <span class="nav-link active-tag" data-images-toggle="all"
+                  >Tous</span
+                >
+              </li>
+              <li class="nav-item active">
+                <span class="nav-link" data-images-toggle="Concert"
+                  >Concert</span
+                >
+              </li>
+              <li class="nav-item active">
+                <span class="nav-link" data-images-toggle="Entreprises"
+                  >Entreprises</span
+                >
+              </li>
+              <li class="nav-item active">
+                <span class="nav-link" data-images-toggle="Mariages"
+                  >Mariages</span
+                >
+              </li>
+              <li class="nav-item active">
+                <span class="nav-link" data-images-toggle="Portrait"
+                  >Portrait</span
+                >
+              </li>
+            </ul>
+
+            <div class="gallery-items-row row">
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
               >
-            </li>
-            <li class="nav-item">
-              <span class="nav-link" data-images-toggle="Mariages"
-                >Mariages</span
+                <img
+                  data-gallery-tag="Concert"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
+                  alt="Salle de concert"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
               >
-            </li>
-            <li class="nav-item">
-              <span class="nav-link" data-images-toggle="Portrait"
-                >Portraits</span
+                <img
+                  data-gallery-tag="Entreprises"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
+                  alt="Homme d'affaire bras croisés"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
               >
-            </li>
-          </ul>
-          <div class="gallery-items-row row">
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Concert"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"
-                alt="Salle de concert"
-              />
+                <img
+                  data-gallery-tag="Entreprises"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
+                  alt="Femme d'affaire souriant"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+              >
+                <img
+                  data-gallery-tag="Mariages"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"
+                  alt="Mains de couple tendues"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+              >
+                <img
+                  data-gallery-tag="Portrait"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"
+                  alt="Homme fermant les yeux"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+              >
+                <img
+                  data-gallery-tag="Mariages"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
+                  alt="Couple marié riant"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+              >
+                <img
+                  data-gallery-tag="Portrait"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"
+                  alt="Femme de face"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+              >
+                <img
+                  data-gallery-tag="Concert"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+                  alt="Chanteur"
+                />
+              </div>
+              <div
+                class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+              >
+                <img
+                  data-gallery-tag="Entreprises"
+                  class="gallery-item img-fluid"
+                  src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
+                  alt="Femme riant au travail"
+                />
+              </div>
             </div>
             <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
+              class="modal fade"
+              id="myAwesomeLightbox"
+              tabindex="-1"
+              aria-hidden="true"
             >
-              <img
-                data-gallery-tag="Entreprises"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
-                alt="Homme d'entreprise"
-              />
-            </div>
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Entreprises"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
-                alt="Femme en entreprise"
-              />
-            </div>
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Mariages"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"
-                alt="Mains"
-              />
-            </div>
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Portrait"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"
-                alt="Homme fermant les yeux"
-              />
-            </div>
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Mariages"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
-                alt="Couple de mariés"
-              />
-            </div>
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Portrait"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"
-                alt="Femme de face"
-              />
-            </div>
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Concert"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
-                alt="Chanteur"
-              />
-            </div>
-            <div
-              class="item-column mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"
-            >
-              <img
-                data-gallery-tag="Entreprises"
-                class="gallery-item img-fluid"
-                src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
-                alt="Femme souriant au travail"
-              />
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="mg-prev">&lt;</div>
+                    <img
+                      class="lightboxImage img-fluid"
+                      alt="Contenu de l'image affichée dans la modale au clique"
+                      src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
+                      alt="Homme d'affaire bras croisés"
+                    />
+                    <div class="mg-next">&gt;</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="quote">
+          <figure>
+            <blockquote>
+              <h1 class="quote__text">
+                Un portrait n’est pas une ressemblance. Dès lors qu’une émotion
+                ou qu’un fait est traduit en photo, il cesse d’être un fait pour
+                devenir une opinion. L’inexactitude n’existe pas en
+                photographie. Toutes les photos sont exactes. Aucune d’elles
+                n’est la vérité.
+              </h1>
+            </blockquote>
+            <figcaption class="quote__author">- Richard Avedon</figcaption>
+          </figure>
+        </div>
       </section>
-
-      <section id="quote">
-        <figure>
-          <blockquote>
-            <p class="quote__text">
-              Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou
-              qu’un fait est traduit en photo, il cesse d’être un fait pour
-              devenir une opinion. L’inexactitude n’existe pas en photographie.
-              Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
-            </p>
-          </blockquote>
-          <figcaption class="quote__author">- Richard Avedon</figcaption>
-        </figure>
-      </section>
-
       <section id="services">
-        <h2>Mes services</h2>
-        <div class="all-services">
+        <h3 class="title">Mes services</h3>
+        <div class="container">
           <div class="service">
-            <div class="description">
+            <div class="service__description">
               <h3>Shooting photo</h3>
               <p>
                 Pour capturer vos moments les plus précieux et garder un
                 souvenir impérissable. Je me déplace en Île-de-France pour
-                réaliser vos photos.
+                réaliser vos photos
               </p>
             </div>
-            <div class="price">
-              <h4>350€/demi-journée</h4>
-              <span>Matériel et déplacement inclus</span>
+            <div class="service__price">
+              <h4>350€/demi journée</h4>
+              <span>Matériel, déplacement inclus</span>
             </div>
           </div>
           <div class="service">
-            <div class="description">
+            <div class="service__description">
               <h3>Retouches</h3>
               <p>
                 Vous souhaitez retoucher vos photos pour un résultat
-                professionnel? Bénéficier d’un rendu optimal pour vos
-                publications.
+                professionnel ? Bénéficier d’un rendu optimal pour vos
+                publications
               </p>
             </div>
-            <div class="price">
+            <div class="service__price">
               <h4>50€/photo</h4>
               <span>2 AR par photo</span>
             </div>
           </div>
           <div class="service">
-            <div class="description">
-              <h3>Album photo</h3>
+            <div class="service__description">
+              <h3>Album photos</h3>
               <p>
                 Partagez avec vos proches et vos clients les photos des moments
-                partagés ensemble à travers un album photo personnalisé.
+                partagés ensemble à travers un album photo personnalisé
               </p>
             </div>
-            <div class="price">
-              <h4>400€/album A4</h4>
-              <span>30 pages recto-verso</span>
+            <div class="service__price">
+              <h4>400€ album A4</h4>
+              <span>30 pages recto/verso</span>
             </div>
           </div>
         </div>
       </section>
-
+      <div class="quote">
+        <figure>
+          <blockquote>
+            <h1 class="quote__text">
+              De manière inconsciente, je crois, je guette un regard, une
+              expression, des traits ou une nostalgie capable de résumer ou plus
+              exactement de révéler une vie
+            </h1>
+          </blockquote>
+          <figcaption class="quote__author">- Richard Avedon</figcaption>
+        </figure>
+      </div>
+    </main>
+    <footer>
       <section id="contact">
         <div class="container">
           <div class="form-container">
-            <h2>Une question? Une demande de devis?</h2>
+            <h3>Une question ? Une demande de devis ?</h3>
             <p>
-              N’hésitez pas à m’écrire! Je vous répondrai en moins de 24 heures.
+              N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24
+              heures
             </p>
             <form action="" method="post">
-              <label for="nom">Nom</label>
-              <input type="text" name="nom" id="nom" placeholder="Votre nom" />
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Votre email"
-              />
-              <label for="message">Message</label>
+              <label>Nom</label>
+              <input type="text" name="nom" id="nom" />
+              <label>Email</label>
+              <input type="email" name="email" id="email" />
+              <label>Message</label>
               <textarea
                 name="message"
                 id="message"
                 cols="30"
                 rows="10"
-                placeholder="Votre message"
               ></textarea>
               <input type="submit" value="Envoyer" />
             </form>
@@ -358,13 +390,8 @@
           </div>
         </div>
       </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 Nina Carducci. Tous droits réservés.</p>
     </footer>
-
-    <script src="script.js"></script>
-    <!-- Lien vers le fichier JavaScript externe -->
   </body>
+  <script src="./assets/maugallery.js"></script>
+  <script src="./assets/scripts.js"></script>
 </html>
