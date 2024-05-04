@@ -595,7 +595,7 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  /*height: auto;*/
 }
 
 .img-thumbnail {
@@ -3931,7 +3931,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #0a58ca;
+  color: #FFFF;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -3970,15 +3970,15 @@ textarea.form-control-lg {
   border-top-right-radius: 0;
 }
 
-.nav-pills .nav-link {
+/*.nav-pills .nav-link {
   background: none;
   border: 0;
   border-radius: 0.25rem;
-}
+}*/
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: #DF0B0B;
 }
 
 .nav-fill > .nav-link,
@@ -7349,9 +7349,9 @@ textarea.form-control-lg {
   margin-bottom: 1rem !important;
 }
 
-.mb-4 {
+/*.mb-4 {
   margin-bottom: 1.5rem !important;
-}
+}*/
 
 .mb-5 {
   margin-bottom: 3rem !important;
