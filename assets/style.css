@@ -2,6 +2,7 @@ body {
 	max-width: 1920px;
 	margin: auto;
 }
+
 * {
 	font-family: 'Inter';
 	font-style: normal;
@@ -100,19 +101,29 @@ nav a {
 }*/
 .title{
 	text-align: center;
-	padding-block: 2em;
+	padding-top: 2em;
 }
 .gallery .nav {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
-	border-radius:0 ;
+	background-color: #DF0B0B;
+	border-radius: 30px;
+	transition: 0.75s;
 }
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
+	transition: 0.75s;
 }
+.nav-link:hover {
+	cursor: pointer;
+	background-color: #DF0B0B;
+	border-radius: 30px;
+	color: white;
+	transition: 0.75s;
+}
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
@@ -122,8 +133,8 @@ nav a {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
-
 }
+
 .gallery-item {
 	position: absolute;
 	width: 100%;
@@ -131,6 +142,7 @@ nav a {
 	object-fit: cover;
 	padding: .5em;
 }
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -158,17 +170,15 @@ nav a {
 }
 
 .quote {
-	font-family: 'Spectral';
-	font-style: italic;
-	width: 70%;
-	margin: auto;
-	padding-block: 3em;
+	width: 100%;
+	background: white;
+	position: relative;
 }
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 1.5rem;
 }
 .quote__author {
 	font-family: Spectral;
@@ -176,6 +186,13 @@ nav a {
 	font-size: 22px;
 }
 
+.containt {
+	font-family: 'Spectral';
+	font-style: italic;
+	width: 70%;
+	margin: auto;
+	padding-block: 3.6rem;
+}
 #services {
 	margin: auto;
 	background-color: #A8D5D8 ;
