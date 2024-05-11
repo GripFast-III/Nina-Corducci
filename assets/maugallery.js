@@ -135,102 +135,55 @@
     },
 
     openLightBox(element, lightboxId) {
+      $(`#${lightboxId}`).data("currentImage", element);
+
       $(`#${lightboxId}`)
         .find(".lightboxImage")
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
 
-    prevImage() {
-      let activeImage = null;
-      $("img.gallery-item").each(function () {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
-          activeImage = $(this);
-          console.log("🚀 ~ activeImage:", activeImage);
-        }
-      });
-
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-
-      let imagesCollection = [];
-      if (activeTag === "all") {
-        $(".item-column").each(function () {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
-          }
-          console.log("🚀 ~ imagesCollection:", imagesCollection);
-        });
-      } else {
-        $(".item-column").each(function () {
-          if ($(this).children("img").data("gallery-tag") === activeTag) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
+    prevImage(lightboxId) {
+      let currentImage = $(`#${lightboxId}`).data("currentImage");
+      if (!currentImage) {
+        // Si aucune image actuelle n'est définie, ne rien faire
+        return;
       }
-      let index = 0,
-        next = null;
 
-      $(imagesCollection).each(function (i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
-          console.log("🚀 ~ index:", index);
-        }
-      });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      let imagesCollection = currentImage
+        .parents(".gallery")
+        .find("img.gallery-item");
+      let currentIndex = imagesCollection.index(currentImage);
+
       let prevIndex =
-        (index - 1 + imagesCollection.length) % imagesCollection.length; // Indique l'index précédent
-      let prevImage = imagesCollection[prevIndex];
-      console.log("Previous Image:", prevImage.attr("src"));
-      $(".lightboxImage").attr("src", prevImage.attr("src"));
+        (currentIndex - 1 + imagesCollection.length) % imagesCollection.length;
+      let prevImage = imagesCollection.eq(prevIndex);
+
+      $(`#${lightboxId}`)
+        .find(".lightboxImage")
+        .attr("src", prevImage.attr("src"));
+      $(`#${lightboxId}`).data("currentImage", prevImage);
     },
 
-    nextImage() {
-      let activeImage = null;
-      $("img.gallery-item").each(function () {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
-          activeImage = $(this);
-          console.log("🚀 ~ activeImage:", activeImage);
-        }
-      });
-
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-
-      let imagesCollection = [];
-      if (activeTag === "all") {
-        $(".item-column").each(function () {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
-          }
-          console.log("🚀 ~ imagesCollection:", imagesCollection);
-        });
-      } else {
-        $(".item-column").each(function () {
-          if ($(this).children("img").data("gallery-tag") === activeTag) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
+    nextImage(lightboxId) {
+      let currentImage = $(`#${lightboxId}`).data("currentImage");
+      if (!currentImage) {
+        // Si aucune image actuelle n'est définie, ne rien faire
+        return;
       }
-      let index = 0,
-        next = null;
 
-      $(imagesCollection).each(function (i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
-          console.log("🚀 ~ index:", index);
-        }
-      });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length + 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
-      let nextIndex =
-        (index + 1 + imagesCollection.length) % imagesCollection.length; // Indique l'index précédent
-      let nextImage = imagesCollection[nextIndex];
-      console.log("Next Image:", nextImage.attr("src"));
-      $(".lightboxImage").attr("src", nextImage.attr("src"));
+      let imagesCollection = currentImage
+        .parents(".gallery")
+        .find("img.gallery-item");
+      let currentIndex = imagesCollection.index(currentImage);
+
+      let nextIndex = (currentIndex + 1) % imagesCollection.length;
+      let nextImage = imagesCollection.eq(nextIndex);
+
+      $(`#${lightboxId}`)
+        .find(".lightboxImage")
+        .attr("src", nextImage.attr("src"));
+      $(`#${lightboxId}`).data("currentImage", nextImage);
     },
 
     createLightBox(gallery, lightboxId, navigation) {
