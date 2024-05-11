@@ -1,5 +1,5 @@
 (function ($) {
-  let currentImageSrc = $(".lightboxImage").attr("src");
+  /*  let currentImageSrc = $(".lightboxImage").attr("src");
   console.log("Current Image Src:", currentImageSrc);
   let currentImage = $("img.gallery-item[src='" + currentImageSrc + "']");
   console.log("Current Image Found:", currentImage.length > 0);
@@ -7,7 +7,7 @@
   let prevImage = currentImage.parents(".item-column").prev().find("img");
   console.log("Previous Image Src:", prevImage.attr("src"));
   let nextImage = currentImage.parents(".item-column").next().find("img");
-  console.log("Next Image Src:", nextImage.attr("src"));
+  console.log("Next Image Src:", nextImage.attr("src"));*/
 
   $(".gallery").on("click", ".mg-prev", function () {
     console.log("Previous clicked");
@@ -146,6 +146,7 @@
       $("img.gallery-item").each(function () {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
+          console.log("🚀 ~ activeImage:", activeImage);
         }
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
@@ -155,6 +156,7 @@
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
           }
+          console.log("🚀 ~ imagesCollection:", imagesCollection);
         });
       } else {
         $(".item-column").each(function () {
@@ -169,12 +171,17 @@
       $(imagesCollection).each(function (i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
           index = i;
+          console.log("🚀 ~ index:", index);
         }
       });
       next =
         imagesCollection[index] ||
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
+      let prevIndex =
+        (index - 1 + imagesCollection.length) % imagesCollection.length;
+      let prevImage = imagesCollection[prevIndex];
+      console.log("Previous Image:", prevImage.attr("src"));
     },
 
     nextImage() {
