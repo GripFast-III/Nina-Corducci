@@ -149,7 +149,9 @@
           console.log("🚀 ~ activeImage:", activeImage);
         }
       });
+
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function () {
@@ -179,9 +181,10 @@
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
       let prevIndex =
-        (index - 1 + imagesCollection.length) % imagesCollection.length;
+        (index - 1 + imagesCollection.length) % imagesCollection.length; // Indique l'index précédent
       let prevImage = imagesCollection[prevIndex];
       console.log("Previous Image:", prevImage.attr("src"));
+      $(".lightboxImage").attr("src", prevImage.attr("src"));
     },
 
     nextImage() {
